@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>My Calculator</title>
+</head>
+
+<body>
+	<div id="app">
+		<header>
+			<h1>Farm Forte</h1>
+			<h1>A Single Page Application Using HTML, CSS & JavaScript For Farmers</h1>
+		</header>
+		<nav>
+			<ul>
+				<li><a href="#" onclick="changeContent('home')">Home</a></li>
+				<li><a href="#" onclick="changeContent('about')">About</a></li>
+				<li><a href="#" onclick="changeContent('contact')">Contact</a></li>
+			</ul>
+		</nav>
+		<main>
+			<div id="content">
+				<img src="https://media.geeksforgeeks.org/wp-content/uploads/geeksforgeeks-12.png">
+				<h2>Welcome to Farm Forte</h2>
+				<p>Farm Forte is a portal for Farmers' benefit giving them some useful recommendations basis specific soil parameters.</p>
+				<p>Visit the GeeksforGeeks portal <a href="https://www.geeksforgeeks.org/" target="_blank"> here </a>.</p>
+			</div>
+			<form name="testing" method="post" action="">
+				<div class="container">
+					<h2> My Farm Calculator</h2>
+					<p><label>pH: </label><input type="number" name="ph" value="0" onBlur="calculate(this.value);"/></p>
+					<p><label>Moisture: </label><input type="number" name="moisture" value="0" onBlur="calculate(this.value);"/></p>
+					<p><label>NPK: </label><input type="number" name="npk" value="0" onBlur="calculate(this.value);"/></p>
+					<p><label>Region: </label><input type="string" name="region" value="NA" onBlur="calculate(this.value);"/></p>
+					<p><label>Recommendation : </label><input type="string" name="output1" id="output1"></p>
+				</div>
+			</form>
+		</main>
+	</div>
+	<script src="script.js"></script>
+</body>
+
+</html>
